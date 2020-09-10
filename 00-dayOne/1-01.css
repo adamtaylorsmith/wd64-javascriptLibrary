@@ -1,0 +1,35 @@
+body {
+    background-color: lightgrey;
+    padding: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#mainTitle {
+    text-align: center;
+}
+
+h2 {
+    color: green;
+    text-align: center;
+}
+h3 {
+    color: blue;
+}
+p {
+    color: red;
+}
+.border {
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: darkgray;
+    padding: 20px;
+}
+.box {
+    width: 28vw;
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 20px;
+    display: inline-block;
+    background-color: lightgray;
+    padding: 10px;
+}
