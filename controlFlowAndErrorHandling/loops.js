@@ -44,8 +44,13 @@ char==0 ? fullName = name[char].toUpperCase() : fullName += name[char].toLowerCa
 //console.log(char);
 console.log(fullName);
 }
-// MORE NOTES ABOUT THIS TO BE PASTED IN INSTRUCTOR CODE TONIGHT
-
+/*
+  1) We are taking the value of the "n" index and declaring the position of 0
+  2) We assign our empty varibale to equal that positioned value.
+  3) If that index is 0, we will take that value and run a ".toUpperCase()"" method on it. 
+  4) If the index is NOT 0, we still want to include it into our empty variable and utilize our += expression so it knows to add the next value (or n++).
+  5) If the index is NOT 0, we want t run a ".toLowerCase()" method so that all letters are in proper case.
+*/
 
 // for of loop
 // must be numbered like an array or string. no objects!!

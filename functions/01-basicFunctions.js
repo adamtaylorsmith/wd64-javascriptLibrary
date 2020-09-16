@@ -33,3 +33,29 @@ let express = function hi() {
 express();
 
 //anonymous functions are stored in memory but doesnt automatically create a reference to it. perhaps for a one-time use
+let anon = function() {
+console.log('anon');
+}
+
+/*parameters
+-allows us to accept information already declared
+*/
+function parameterFunc(num){
+    console.log(num);
+}
+parameterFunc(2);
+parameterFunc(7);
+let returnedVal = 5;
+parameterFunc(returnedVal);
+
+
+let firstName = 'jane';
+let lastName = 'doe';
+function greeting(x,y) {
+    console.log(`hi ${x} ${y}`);
+    console.log(`first param: ${x}`);
+    console.log(`last param: ${y}`);
+}
+greeting(firstName, lastName);
+greeting("", lastName);
+greeting(lastName);
