@@ -6,44 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 
-    common methods for accessing single elements:
-        getElementById()
-        querySelector()
-    common methods for accessing multiple elements:
-        querySelectorAll()
-        getElementByClassName()
-        getElementByTagName()
-    common methods for working with html:
-        innerHTML
-        textContent
-        createElement
-    common methods for working with tags:
-        className / id
-        setAttribute()
-        getAttribute()
--->
+    <h1>Hello</h1>
+    <p id="testParagraph">sample text</p>
+    <p class="sampleClass">p with a class of sampleClass</p>
+    <button id="clickThisButton">i want to be clicked</button>
+    <br><br>
+    <label for="nameInput">Enter you name:</label>
+    <input type="text" id="nameInput" placeholder="david bowie">
+    <p>welcome!</p>
+    <p>no name has been entered</p>
 
-    <h1>HELLO</h1>
-    <p id="testParagraph">Sample text</p>
-    <p class="sampleClass">A class paragraph</p>
-    <p class="sampleClass">A class paragraph</p>
-    <p class="sampleClass">A class paragraph</p>
-    <p class="sampleClass">A class paragraph</p>
-
-    <span id="spanTest">Hello
-        <span style="display:none;">World</span>
-    </span>
-
-    <!-- ! 3: addEventListener -->
-    <button id="clickThis">CLICK!</button>
-    <br>
-    <hr>
-
-    <!-- ! 4: keyup -->
-    <label for="nameInput">Enter Your Name:</label> <br>
-    <input type="text" id="nameInput" placeholder="Your Name Here">
-
-<script src="script.js"></script>
+<script>
+    // console.log('hi');
+    // document.getElementById('testParagraph').style.color = 'blue';
+    // console.log(document.querySelectorAll('p.sampleClass'));
+    // // document.querySelectorAll('p.sampleClass')[0].innerText = 'the text has changed!';
+    // document.querySelectorAll('p.sampleClass')[0].innerHTML = '<span>a whole new element!</span>';
+    // document.getElementById('clickThisButton').addEventListener('click', (details) => {
+    //     details.target.style.backgroundColor = 'red';
+    // });
+    document.getElementById('nameInput').addEventListener('keyup', (event) => {
+        console.log(event.target.value);
+        console.log(document.getElementsByTagName('p'));
+        if(event.target.value === '') {
+            document.getElementsByTagName('p')[1].innerText = 'no name entered';
+        } else {
+        document.getElementsByTagName('p')[1].innerText = `welcome ${event.target.value} to the stage`;
+        }
+    });
+</script>
 </body>
 </html>
